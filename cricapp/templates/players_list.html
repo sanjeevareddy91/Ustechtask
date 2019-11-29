@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="container">
+		<div class="mt-5 mb-5">
+			<legend>{{team_name.team_name}}</legend>
+			<table class="table table-hover text-center">
+				<thead>
+				<tr>
+                    <th scope="col">Player Jersey Number</th>
+					<th scope="col">First Name</th>
+					<th scope="col">Last Name</th>
+					<th scope="col">Player Image</th>
+				</tr>
+				</thead>
+				{% for data in objects_list %}
+				<tbody>
+				<tr>
+                    <td>{{data.player_jersey_number}}</td>
+                    <td>{{data.first_name}}</td>
+                    <td>{{data.last_name}}</td>
+					<td><img style="border-radius: 50%;" height="35" width="35" src="{{data.player_image.url}}"/></td>
+				</tr>
+				</tbody>
+				{% endfor %}
+			</table>
+		</div>
+	</div>
+{% endblock %}

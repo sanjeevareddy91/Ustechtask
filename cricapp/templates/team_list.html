@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="container">
+		<div class="mt-5 mb-5">
+			<legend>Team List</legend>
+			<table class="table table-hover text-center">
+				<thead>
+				<tr>
+					<th scope="col">Team Name</th>
+					<th scope="col">Team Logo</th>
+					<th scope="col">Players</th>
+					<th scope="col">Matches</th>
+				</tr>
+				</thead>
+				{% for data in object_list %}
+				<tbody>
+				<tr>
+					<td>{{data.club_state}}</td>
+					<td><img style="border-radius: 50%;" height="42" width="42" src="{{data.team_logo.url}}"/></td>
+					<td><a href="{% url 'single_players' team_id=data.team_id %}"> Click Here</a></td>
+					<td><a href="{% url 'single_matches' team_id=data.team_id %}"> Click Here</a></td>
+				</tr>
+				</tbody>
+				{% endfor %}
+			</table>
+		</div>
+	</div>
+{% endblock %}

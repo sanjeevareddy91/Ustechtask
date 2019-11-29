@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="container">
+		<div class="mt-5 mb-5">
+			<legend>Team List</legend>
+			<table class="table table-hover text-center">
+				<thead>
+				<tr>
+                    <th scope="col">Match ID</th>
+                    <th scope="col">First Team</th>
+                    <th scope="col">Second Team</th>
+                    <th scope="col">Winner</th>
+				</tr>
+				</thead>
+				{% for data in object_list %}
+				<tbody>
+				<tr>
+                    <td>{{data.id}}</td>
+                    <td>{{data.first_team.team_name}}</td>
+                    <td>{{data.second_team.team_name}}</td>
+                    <td>{{data.winner.team_name}}</td>
+				</tr>
+				</tbody>
+				{% endfor %}
+			</table>
+		</div>
+	</div>
+{% endblock %}

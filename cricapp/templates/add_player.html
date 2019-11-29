@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="text-center">Add Player</h1>
+<div class="col-md-6 offset-md-3">
+	<form method="POST" action="" enctype="multipart/form-data">
+		{% csrf_token %}
+		  <div class="form-group">
+		  	<label class="col-form-label col-form-label-sm">Player ID
+			</label>
+		    <input type="text" class="form-control" placeholder="Enter Team ID" name="player_id">
+		  </div>
+		  <div class="form-group">
+		  	<label class="col-form-label col-form-label-sm" >First Name
+			</label>
+		    <input type="text" step="any" class="form-control" placeholder="Enter First Name" name="first_name">
+          </div>
+		  <div class="form-group">
+                <label class="col-form-label col-form-label-sm" >Last Name
+              </label>
+              <input type="text" step="any" class="form-control" placeholder="Enter Last Name" name="last_name">
+            </div>
+		  <div class="form-group">
+				<label class="col-form-label col-form-label-sm">Player Image
+			  </label>
+			  <input type="file" step="any" class="form-control" placeholder="Player Image" name="player_image">
+            </div>
+        <div class="form-group">
+                <label class="col-form-label col-form-label-sm" >Jersey Number
+                </label>
+                <input type="text" step="any" class="form-control" placeholder="Enter Jersey Number" name="player_jersey_number">
+            </div>
+		  <div class="form-group">
+		  	<label class="col-form-label col-form-label-sm">Player Country
+			</label>
+		    <input type="text" step="any" class="form-control" placeholder="Enter Player Country" name="player_country">
+          </div>
+		  <div class="form-group">
+                <label class="col-form-label col-form-label-sm">Player Team
+              </label>
+              <select  class="form-control" name="player_team">
+                    <option value="mumbai">Mumbai</option>
+                    <option value="chennai">Chennai</option>
+                    <option value="kolkata">Kolkata</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="bengaluru">Bengaluru</option>
+                </select>
+            </div>
+		  <div class="form-group">
+		  	<label class="col-form-label col-form-label-sm">No of Matches Played
+			</label>
+		    <input type="text" class="form-control" placeholder="Enter Matches Played" name="no_matches_played">
+		  </div>
+		  <div class="form-group">
+		  	<label class="col-form-label col-form-label-sm" >Total Runs Scored
+			</label>
+		    <input type="text" step="any" class="form-control" placeholder="Enter Total Runs Scored" name="total_runs_scored">
+          </div>
+		  <div class="form-group">
+                <label class="col-form-label col-form-label-sm" >Highest Scores
+              </label>
+              <input type="text" step="any" class="form-control" placeholder="Enter Highest Score" name="highest_score">
+            </div>
+		  <div class="form-group">
+		  	<label class="col-form-label col-form-label-sm">Fifties
+			</label>
+		    <input type="text" class="form-control" placeholder="Enter Fifties" name="fifties">
+		  </div>
+		  <div class="form-group">
+		  	<label class="col-form-label col-form-label-sm" >Hundreds
+			</label>
+		    <input type="text" step="any" class="form-control" placeholder="Enter Hundreds" name="hundreds">
+          </div>
+		  <div class="form-group">
+                <label class="col-form-label col-form-label-sm" >No of Catches
+              </label>
+              <input type="text" step="any" class="form-control" placeholder="Enter No Of Catches" name="no_of_catches">
+            </div>
+		  <div class="form-group">
+		  	<label class="col-form-label col-form-label-sm">Average
+			</label>
+		    <input type="text" class="form-control" placeholder="Enter Average" name="average">
+		  </div>
+		  <div class="form-group">
+		  	<label class="col-form-label col-form-label-sm" >Strike Rate
+			</label>
+		    <input type="text" step="any" class="form-control" placeholder="Enter Strike Rate" name="strike_rate">
+          </div>
+		  <div class="form-group">
+                <label class="col-form-label col-form-label-sm" >Player Role
+              </label>
+              <input type="text" step="any" class="form-control" placeholder="Enter Player Role" name="player_role">
+            </div>
+		  <div class="form-group">
+                <label class="col-form-label col-form-label-sm" >No of Wickets
+              </label>
+              <input type="text" step="any" class="form-control" placeholder="Enter No of Wickets" name="no_of_wickets">
+            </div>
+
+		  <button type="submit" class="btn btn-secondary">submit</button>
+		</form>
+	</div>	  
+	</form>
+</div>
+
+
+{% endblock %}
