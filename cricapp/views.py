@@ -17,8 +17,6 @@ class TeamCreateView(CreateView):
 class TeamListView(ListView):
     model = Team
     template_name = 'team_list.html'
-    # fields="__all__" 
-    # success_url = reverse_lazy('team_create')
 
 def add_player(request):
     if request.method=="POST" and request.FILES:
